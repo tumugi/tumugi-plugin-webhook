@@ -1,45 +1,40 @@
-# webhook plugin for [tumugi](https://github.com/tumugi/tumugi)
+# WebHook plugin for [tumugi](https://github.com/tumugi/tumugi)
 
-TODO: Write short description here and tumugi-plugin-webhook.gemspec file.
+tumugi-plugin-webhook is a plugin for integrate various WebHooks and [tumugi](https://github.com/tumugi/tumugi).
 
-## Target
+## Installation
 
-### Tumugi::Plugin::WebhookTarget
+Add this line to your application's Gemfile:
 
-TODO: Write description about `Tumugi::Plugin::WebhookTarget`.
+```ruby
+gem 'tumugi-plugin-webhook'
+```
+
+And then execute `bundle install`.
 
 ## Task
 
 ### Tumugi::Plugin::WebhookTask
 
-TODO: Write description about `Tumugi::Plugin::WebhookTask`.
+`Tumugi::Plugin::WebhookTask` is a task to send a HTTP request for any WebHooks.
 
 #### Parameters
 
-- **param1** description (string, required)
-- **param2** description (integer, optional, default: 1)
+- **url** WebHook URL (string, required)
+- **http_method** HTTP method (string, optional, default: "post")
+- **body** WebHook body (string or hash, optional, default: `nil`)
+- **body_encoding** WebHook body encoding type (string, optional, default: "json")
+  - "json": MIME type is `application/json`
+  - "url_encoded": MIME type is  `application/x-www-form-urlencoded`
 
 #### Example
 
 ```rb
 task :main, type: :webhook do
-  param1 'value1'
-  output { target(:webhook, param1) }
-end
-```
-
-### Config Section
-
-TODO: Write description about config section named "webhook"
-if this plugin has config section.
-
-#### Example
-
-```rb
-Tumugi.configure do |config|
-  config.section("webhook") do |section|
-    section.config1 = "xxx"
-  end
+  url "http://httpbin.org/post"
+  body {
+    { text: "message" }
+  }
 end
 ```
 
