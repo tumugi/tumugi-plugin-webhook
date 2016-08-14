@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "tumugi-plugin-webhook"
   spec.version       = "0.1.0"
-  # TODO set this: spec.authors       = ["Your Name"]
-  # TODO set this: spec.email         = ["your-email@example.com"]
+  spec.authors       = ["Kazuyuki Honda"]
+  spec.email         = ["hakobera@gmail.com"]
 
-  spec.summary       = "webhook plugin for tumugi"
-  # TODO set this: spec.homepage      = "https://github.com/YOUR_ACCOUNT/tumugi-plugin-webhook"
+  spec.summary       = "WebHook plugin for tumugi"
+  spec.homepage      = "https://github.com/hakobera/tumugi-plugin-webhook"
   spec.license       = "Apache License Version 2.0"
 
   spec.required_ruby_version = '>= 2.1'
@@ -19,10 +19,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "tumugi", ">= 0.6.3"
-  #spec.add_dependency 'YOUR_GEM_DEPENDENCY', ['~> YOUR_GEM_DEPENDENCY_VERSION']
+  spec.add_dependency "faraday", "~> 0.9.2"
 
-  spec.add_development_dependency 'bundler', '~> 1.11'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'test-unit', '~> 3.1'
-  spec.add_development_dependency 'test-unit-rr'
+  spec.add_development_dependency "bundler", "~> 1.11"
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "test-unit", "~> 3.1"
+  spec.add_development_dependency "test-unit-rr"
 end
