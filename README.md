@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tumugi/tumugi-plugin-webhook.svg?branch=master)](https://travis-ci.org/tumugi/tumugi-plugin-webhook) [![Code Climate](https://codeclimate.com/github/tumugi/tumugi-plugin-webhook/badges/gpa.svg)](https://codeclimate.com/github/tumugi/tumugi-plugin-webhook) [![Coverage Status](https://coveralls.io/repos/github/tumugi/tumugi-plugin-webhook/badge.svg?branch=master)](https://coveralls.io/github/tumugi/tumugi-plugin-webhook)
+
 # WebHook plugin for [tumugi](https://github.com/tumugi/tumugi)
 
 tumugi-plugin-webhook is a plugin for integrate various WebHooks and [tumugi](https://github.com/tumugi/tumugi).
