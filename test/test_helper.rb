@@ -6,3 +6,6 @@ require 'test/unit/rr'
 require 'tumugi'
 require 'tumugi/test/helper'
 include Tumugi::Test::Helpers
+
+require 'fileutils'
+FileUtils.mkdir_p('tmp')
