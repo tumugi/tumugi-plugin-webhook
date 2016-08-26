@@ -1,4 +1,5 @@
 require 'tumugi'
+require 'tumugi/plugin/file_system_target'
 require 'faraday'
 require 'faraday_middleware'
 require 'uri'
